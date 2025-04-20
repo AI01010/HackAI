@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 from flask_cors import CORS
 import pandas as pd
 import tensorflow as tf
+import numpy as np
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 matplotlib.use('Agg')
 
@@ -14,6 +15,7 @@ CORS(app)  # Allow cross-origin requests
 
 # Load the trained neural network model
 foodModel = tf.keras.models.load_model('MlAlgos/food_neural_network_model.keras')
+monthModel = tf.keras.models.load_model('MlAlgos/monthlySales_neural_network_model.keras')
 
 @app.route('/python/getResults', methods=["POST"])
 def getResults():
@@ -104,12 +106,11 @@ def GetFoods():
 def GetMonthlySales():
     data = request.get_json()
     year = data["year"]
-    monthNames = ["August, February, March, April, May, June, July, August, September"]
+    monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September"]
     monthSales = list()
     monthData = pd.read_csv("FinalData/SalesPerMonth.csv")
 
     scaler = StandardScaler()
-    scaler.fit(monthData[["Date"]])  # Use 'Date' column for scaling
 
     # for each of the 9 months
     for i in range(9):
@@ -119,11 +120,13 @@ def GetMonthlySales():
         })
 
         # Preprocess the input data (encode 'Food' and scale 'Date')
+        scaler.fit(monthData[["Month"]]) 
         sample_input['Month'] = scaler.transform(sample_input[['Month']])  # Scale 'Date'
+        scaler.fit(monthData[["Year"]])  
         sample_input[['Year']] = scaler.transform(sample_input[['Year']])  # Scale 'Date'
 
         # Make a prediction with the neural network
-        estCost = foodModel.predict(sample_input)
+        estCost = monthModel.predict(sample_input)
 
         # Extract the predicted revenue (assuming it's a scalar output)
         estCost = estCost[0][0]  # Extract the scalar value from the 2D array
@@ -133,6 +136,7 @@ def GetMonthlySales():
     plt.xlabel("Month")
     plt.xticks(fontsize=6)
     plt.ylabel("Sales")
+    plt.ylim(np.min(monthSales) - 20, np.max(monthSales) + 20)
     plt.title("Revenue in Months For Year")
 
     # Save the plot to a buffer
