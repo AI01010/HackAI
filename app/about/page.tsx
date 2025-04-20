@@ -13,8 +13,8 @@ export default function About() {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-2">🍕 Inspiration</h2>
             <p>
-              Pizza shops throw away <strong>$1.9B annually in food waste</strong> while struggling with staffing during peak hours. 
-              We built Saucy Sales after discovering Sauce Bros' need for better demand forecasting in their order data. 
+              Pizza shops throw away <strong>$1.9B annually in food waste</strong> while struggling with staffing during peak hours.
+              We built Saucy Sales after discovering Sauce Bros' need for better demand forecasting in their order data.
               The final push came from seeing <strong>78% of pizza operators</strong> cite "inventory optimization" as their top challenge in the 2025 industry report.
             </p>
           </section>
@@ -70,7 +70,7 @@ export default function About() {
             <ul className="list-disc pl-6">
               <li><strong>Menu Simulator:</strong> Test how new pizzas could impact sales.</li>
               <li><strong>AI Toppings Advisor:</strong> Suggests trending recipes based on local data.</li>
-              <li><strong>Chain Mode:</strong> Expand to support 250+ locations for franchises.</li>
+              <li><strong>Chain Mode:</strong> Expand to support 250+ locations for franchise clients.</li>
             </ul>
             <p className="mt-4 italic text-gray-600">
               "Forecasting should be as satisfying as that last perfect slice." – Our Developer Mantra
