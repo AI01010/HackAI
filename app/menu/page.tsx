@@ -1,37 +1,42 @@
+// app/menu/page.tsx
+import MenuItem from '@/components/MenuItem';
 
-'use client'
-
-import Image from "next/image";
-import { Button } from '@mui/material';
-import axios from 'axios'
-import { useState } from "react";
-
-export default function Home() {
-  const [userData, setUserData] = useState([])
-  const [graph, setGraph] = useState("")
-  
-  //function that calls python
-  const callPython = async() => {
-    const response = await axios.post("http://localhost:5000/python/getResults", {
-      userData: userData
-    })
-    const data = response.data
-    if(data.success == true)
+// Mock data (replace with your actual data loading)
+const menuItems: MenuItem[] = [
     {
-      console.log(data.message)
-      setGraph(`data:image/png;base64,${data.image}`)
-    }
-    else
+        name: "Margherita Pizza",
+        description: "Classic tomato, mozzarella, and basil",
+        price: 12.99,
+        category: "Pizza",
+        image: "/images/margherita.jpg"
+    },
     {
-      console.log("VENOMMMM WE GOTAT GET EM GET EMMMM")
-    }
-  }
-  
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <p>Click the button if you're goated:</p>
-      <Button onClick={callPython}>Python generator</Button>
-      <img src={graph}></img>
-    </div>
-  );
+        name: "Pepperoni Pizza",
+        description: "Classic tomato, mozzarella, and pepperoni",
+        price: 14.99,
+        category: "Pizza",
+        image: "/images/pepperoni.jpg"
+    },
+        {
+        name: "BBQ Chicken Pizza",
+        description: "Chicken, BBQ sauce, mozzarella, and basil",
+        price: 16.99,
+        category: "Pizza",
+        image: "/images/bbqchicken.jpg"
+    },
+];
+
+export default function MenuPage() {
+    return (
+        <div className="bg-gray-100 min-h-screen py-8">
+            <div className="container mx-auto px-4">
+                <h1 className="text-3xl font-bold text-gray-800 mb-6">Our Menu</h1>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {menuItems.map((item) => (
+                        <MenuItem key={item.name} item={item} />
+                    ))}
+                </div>
+            </div>
+        </div>
+    );
 }

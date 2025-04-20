@@ -2,6 +2,17 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+Download:
+
+npm install next
+npm install --save-dev @types/react
+
+npm install react react-dom next
+npm install -D tailwindcss postcss autoprefixer
+npm install @tailwindcss/forms
+
+
+
 First, run the development server:
 
 ```bash
