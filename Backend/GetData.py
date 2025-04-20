@@ -45,7 +45,8 @@ def getResults():
 def GetFoods():
     data = request.get_json()
     year = data["year"]
-    maxFoods = data["topTaken"]
+    min = data["leftRange"]
+    max = data["rightRange"]
     foodArr = list()
     foodData = pd.read_csv("FinalData/IndividualFoodData.csv")
     foodData = foodData.iloc[:, 0]
@@ -59,8 +60,8 @@ def GetFoods():
 
     foods, revenue = zip(*sorted_foods)
 
-    plt.bar(foods[:maxFoods], revenue[:maxFoods])
-    plt.ylim(revenue[maxFoods - 1] - 50, revenue[0] + 50)
+    plt.bar(foods[min:max], revenue[min:max])
+    plt.ylim(revenue[max - 1] - 25, revenue[0] + 25)
     plt.xlabel("Food")
     plt.xticks(fontsize=6)
     plt.ylabel("Revenue")
@@ -72,7 +73,7 @@ def GetFoods():
     imgBuffer.seek(0)
     finalStr = base64.b64encode(imgBuffer.read()).decode("utf-8")
 
-    return jsonify({"success": True, "message": "GRAHHHH", "image": finalStr})
+    return jsonify({"success": True, "message": "GRAHHHH", "image": finalStr, "numFoods": len(foodArr)})
     
 
     
