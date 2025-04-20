@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Image from "next/image";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,16 +25,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {/* Background image */}
-        <div className="fixed inset-0 -z-10 w-full h-full">
-          <Image
-            src="/background-image.png" // Use a string path for public images
-            alt="Background"
-            fill
-            style={{ objectFit: "cover" }}
-            priority
-          />
-        </div>
+        {/* Animated Background – using a div with CSS background */}
+        <div className="fixed inset-0 -z-10 w-full h-full bg-animated" />
         <main className="relative min-h-screen">{children}</main>
       </body>
     </html>

@@ -21,6 +21,7 @@ export default function Navbar() {
           >
             {link.name}
             <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
+            <span className="absolute left-0 top-0 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
           </Link>
         ))}
       </nav>
