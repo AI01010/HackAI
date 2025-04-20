@@ -28,3 +28,5 @@ seasonal by dates (dates)
 peak hrs by time (times)
 top 10 menu items by items lists (item sales + menu breakdown??? [optional])
 avg net gains from total report
+
+financial summary + suggestions??
