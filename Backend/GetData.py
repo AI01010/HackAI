@@ -1,6 +1,7 @@
 import base64
 import io
 from flask import Flask, request, jsonify
+import joblib
 import matplotlib
 import matplotlib.pyplot as plt
 from flask_cors import CORS
@@ -55,7 +56,7 @@ def GetFoods():
     label_encoder.fit(foodData_foods)
 
     # Fit StandardScaler on the 'Date' column
-    scaler = StandardScaler()
+    scaler = joblib.load("MlAlgos/month_scaler.save")
     scaler.fit(foodData[["Date"]])  # Use 'Date' column for scaling
 
     # Predict revenue for each food item
@@ -109,9 +110,10 @@ def GetMonthlySales():
     monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September"]
     monthSales = list()
     monthData = pd.read_csv("FinalData/SalesPerMonth.csv")
-
+    
     scaler = StandardScaler()
-
+    scaler.fit(monthData[["Month", "Year"]])
+    y_scaler = joblib.load("MlAlgos/sales_scaler.save")
     # for each of the 9 months
     for i in range(9):
         sample_input = pd.DataFrame({
@@ -120,17 +122,15 @@ def GetMonthlySales():
         })
 
         # Preprocess the input data (encode 'Food' and scale 'Date')
-        scaler.fit(monthData[["Month"]]) 
-        sample_input['Month'] = scaler.transform(sample_input[['Month']])  # Scale 'Date'
-        scaler.fit(monthData[["Year"]])  
-        sample_input[['Year']] = scaler.transform(sample_input[['Year']])  # Scale 'Date'
+        sample_input[['Month', 'Year']] = scaler.transform(sample_input[['Month', 'Year']])  # Scale 'Month' and 'Year'
+        
+        estCost_scaled = monthModel.predict(sample_input)
 
-        # Make a prediction with the neural network
-        estCost = monthModel.predict(sample_input)
+        # Invert scaling to get back the real sales value
+        estCost_unscaled = y_scaler.inverse_transform(estCost_scaled)[0][0]
 
-        # Extract the predicted revenue (assuming it's a scalar output)
-        estCost = estCost[0][0]  # Extract the scalar value from the 2D array
-        monthSales.append(estCost)
+        # Store the actual (unscaled) prediction
+        monthSales.append(estCost_unscaled)
     
     plt.bar(monthNames, monthSales)
     plt.xlabel("Month")
@@ -138,6 +138,8 @@ def GetMonthlySales():
     plt.ylabel("Sales")
     plt.ylim(np.min(monthSales) - 20, np.max(monthSales) + 20)
     plt.title("Revenue in Months For Year")
+
+    print("Sample predictions:", monthSales[:5])
 
     # Save the plot to a buffer
     imgBuffer = io.BytesIO()
