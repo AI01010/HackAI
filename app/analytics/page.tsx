@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen flex justify-center items-start p-8 pt-20">
+      <main className="min-h-screen flex justify-center items-start p-8 pt-10">
         <div className="bg-white/90 bg-opacity-90 rounded-lg shadow-lg max-w-7xl w-full p-8 space-y-8">
           {/* Logo and Prediction Dropdown */}
           <div className="flex flex-col items-center mb-8">

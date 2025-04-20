@@ -12,7 +12,7 @@ export default function About() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen flex justify-center items-start p-8 pt-20">
+      <main className="min-h-screen flex justify-center items-start p-8 pt-10">
         <div className="bg-white/90 bg-opacity-90 rounded-lg shadow-lg max-w-7xl p-8 text-[#3e2c1c]">
           <h1 className={`${rye.className} text-4xl font-bold mb-6 text-[#8b0000]`}>About Saucy Sales</h1>
 

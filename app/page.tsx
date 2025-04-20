@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen flex justify-center items-center pt-0 px-8">
+      <main className="min-h-screen flex justify-center items-start pt-10 px-8">
         <div className="bg-white/90 bg-opacity-90 rounded-lg shadow-lg max-w-7xl w-full p-9 flex flex-col items-center gap-4">
           <Image
             src="/saucy-sales-logo-removebg.png"
