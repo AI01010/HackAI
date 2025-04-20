@@ -18,7 +18,7 @@ navibar: homepg[main - data visuals],        menu,      about (blurb, explanatio
 
 inputs:
 pizza sales (sales breakdown)
-whats no sales category???
+whats no sales category??? stil pizza?
 
 trends:
 seasonal by dates (dates)
