@@ -61,6 +61,7 @@ export default function TopMenuItemsChart({ predictionRange }: Props) {
 
   return (
   <div className="bg-white p-4 rounded-lg shadow">
+    <h3 className="text-xl font-bold mb-4">Top Selling Menu Items</h3>
     <img src={foodChart} className="w-full" />
     <div className="flex justify-between mt-4">
       <Button variant="contained" onClick={incrementToLeft}>Back</Button>

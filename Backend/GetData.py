@@ -1,19 +1,19 @@
 import base64
 import io
-from catboost import CatBoostRegressor
 from flask import Flask, request, jsonify
 import matplotlib
 import matplotlib.pyplot as plt
 from flask_cors import CORS
 import pandas as pd
+import tensorflow as tf
+from sklearn.preprocessing import LabelEncoder, StandardScaler
 matplotlib.use('Agg')
 
 app = Flask(__name__)
 CORS(app)  # Allow cross-origin requests
 
-catBoostModel = CatBoostRegressor()
-catBoostModel.load_model('MlAlgos/catboost_model.cbm')
-
+# Load the trained neural network model
+foodModel = tf.keras.models.load_model('MlAlgos/neural_network_model.keras')
 
 @app.route('/python/getResults', methods=["POST"])
 def getResults():
@@ -22,62 +22,85 @@ def getResults():
     plt.scatter([], [])
     plt.title("lmao gottem")
 
-    # turns out this creates a buffer in ram
+    # Create a buffer in memory to save the image
     imgBuffer = io.BytesIO()
 
-    # now save our image into the buffer
-    plt.savefig(imgBuffer, format = "png")
-
-    # don't need it no more
+    # Save the image to the buffer
+    plt.savefig(imgBuffer, format="png")
     plt.close()
 
-    # points buffer back to start, after we wrote the file it pointed to the end of the file, so had to reset it
+    # Reset the buffer to the start after writing to it
     imgBuffer.seek(0)
 
-    #right now imgBuffer is raw bites, we convert it first to 64 bit string then decode to regular python string
+    # Convert the image to a base64 string
     finalStr = base64.b64encode(imgBuffer.read()).decode("utf-8")
 
-
-    # should return the graph in base65 
     return jsonify({"success": True, "message": "GRAHHHH", "image": finalStr})
 
 @app.route("/python/GetTopFoods", methods=["POST"])
 def GetFoods():
     data = request.get_json()
     year = data["year"]
+    print("Year: " + str(year))
     min = data["leftRange"]
     max = data["rightRange"]
+
     foodArr = list()
     foodData = pd.read_csv("FinalData/IndividualFoodData.csv")
-    foodData = foodData.iloc[:, 0]
-    foodData = foodData[1:].drop_duplicates().to_list()
-    for food in foodData:
-        estCost = catBoostModel.predict([[food, year]])
-        estCost = estCost[0]
+
+    # Fit LabelEncoder on unique foods
+    foodData_foods = foodData["Food"].drop_duplicates().to_list()
+    label_encoder = LabelEncoder()
+    label_encoder.fit(foodData_foods)
+
+    # Fit StandardScaler on the 'Date' column
+    scaler = StandardScaler()
+    scaler.fit(foodData[["Date"]])  # Use 'Date' column for scaling
+
+    # Predict revenue for each food item
+    for food in foodData_foods:
+        # Create the sample input DataFrame for the neural network
+        sample_input = pd.DataFrame({
+            "Food": [food],
+            "Date": [year]  # Replace `year` with the actual year value for prediction
+        })
+
+        # Preprocess the input data (encode 'Food' and scale 'Date')
+        sample_input['Food'] = label_encoder.transform(sample_input['Food'])  # Encode 'Food'
+        sample_input[['Date']] = scaler.transform(sample_input[['Date']])  # Scale 'Date'
+
+        # Make a prediction with the neural network
+        estCost = foodModel.predict(sample_input)
+
+        # Extract the predicted revenue (assuming it's a scalar output)
+        estCost = estCost[0][0]  # Extract the scalar value from the 2D array
         foodArr.append([food, estCost])
-    
+
+    # Sort foods by predicted revenue
     sorted_foods = sorted(foodArr, key=lambda x: x[1], reverse=True)
 
     foods, revenue = zip(*sorted_foods)
 
+    # Create a bar chart of the top foods by revenue
     plt.bar(foods[min:max], revenue[min:max])
     plt.ylim(revenue[max - 1] - 25, revenue[0] + 25)
     plt.xlabel("Food")
     plt.xticks(fontsize=6)
     plt.ylabel("Revenue")
     plt.title("Top Revenue-Generating Foods")
-    
+
+    # Save the plot to a buffer
     imgBuffer = io.BytesIO()
     plt.savefig(imgBuffer, format="png")
     plt.close()
+
     imgBuffer.seek(0)
+
+    # Convert the image to a base64 string
     finalStr = base64.b64encode(imgBuffer.read()).decode("utf-8")
 
     return jsonify({"success": True, "message": "GRAHHHH", "image": finalStr, "numFoods": len(foodArr)})
-    
-
-    
 
 if __name__ == '__main__':
     print("app is running")
-    app.run(debug=True, port=5000)  # Runn1ng on port 5001
+    app.run(debug=True, port=5000)  # Running on port 5000
