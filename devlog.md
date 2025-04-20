@@ -16,3 +16,12 @@ navibar: homepg[main - data visuals],        menu,      about (blurb, explanatio
           \--> []prev data []predict data
 
 
+inputs:
+pizza sales (sales breakdown)
+whats no sales category???
+
+trends:
+seasonal by dates (dates)
+peak hrs by time (times)
+top 10 menu items by items lists (item sales + menu breakdown??? [optional])
+avg net gains from total report
