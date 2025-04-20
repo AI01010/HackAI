@@ -3,6 +3,12 @@
 import Navbar from "@/components/Navbar";
 import MenuItem from '@/components/MenuItem';
 import Image from 'next/image';
+import { Rye } from 'next/font/google';
+
+const rye = Rye({
+    subsets: ['latin'],
+    weight: '400',
+});
 
 const menuItems = [
     { name: "Korean BBQ", description: "Spicy and savory Korean BBQ pizza.", price: 24.1, category: "Pizza", image: "/menu_images/Korean-BBQ-Pizza.jpeg" },
@@ -54,8 +60,8 @@ export default function MenuPage() {
         <>
             <Navbar />
             <main className="min-h-screen flex justify-center items-start p-8 pt-20">
-                <div className="bg-white bg-opacity-90 rounded-lg shadow-lg max-w-7xl w-full p-8">
-                    <h1 className="text-3xl font-bold text-[#3e2c1c] mb-6 text-center">The Menu</h1>
+                <div className="bg-white/90 bg-opacity-90 rounded-lg shadow-lg max-w-7xl w-full p-8">
+                    <h1 className={`${rye.className} text-5xl font-bold text-[#8b0000] mb-6 text-center`}>THE MENU</h1>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                         {menuItems.map((item) => (
                             <MenuItem key={item.name} item={item} />

@@ -1,14 +1,20 @@
 'use client';
 
 import Navbar from "@/components/Navbar";
+import { Rye } from "next/font/google";
+
+const rye = Rye({
+  subsets: ['latin'],
+  weight: '400',
+});
 
 export default function About() {
   return (
     <>
       <Navbar />
       <main className="min-h-screen flex justify-center items-start p-8 pt-20">
-        <div className="bg-white bg-opacity-90 rounded-lg shadow-lg max-w-5xl p-8 text-[#3e2c1c] font-serif">
-          <h1 className="text-4xl font-bold mb-6 text-red-600">About Saucy Sales</h1>
+        <div className="bg-white/90 bg-opacity-90 rounded-lg shadow-lg max-w-7xl p-8 text-[#3e2c1c]">
+          <h1 className={`${rye.className} text-4xl font-bold mb-6 text-[#8b0000]`}>About Saucy Sales</h1>
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-2">🍕 Inspiration</h2>
