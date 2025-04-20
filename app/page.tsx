@@ -16,7 +16,7 @@ export default function Home() {
       <Navbar />
       <main className="min-h-screen flex justify-center items-start pt-10 px-8">
         <div
-          className="rounded-lg shadow-lg max-w-7xl w-full p-9 flex flex-col items-center gap-4
+          className="rounded-lg shadow-lg max-w-7xl w-full p-10 flex flex-col items-center gap-4
                      bg-[url('/pizza.png')] bg-cover bg-center bg-white/75 bg-blend-overlay"
         >
           <Image
