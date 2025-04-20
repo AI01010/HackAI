@@ -1,61 +1,40 @@
 'use client';
 
 import Navbar from "@/components/Navbar";
-import NetGainsChart from "@/components/NetGainsChart";
-import SeasonalTrendsChart from "@/components/SeasonalTrendsChart";
-import PeakHoursChart from "@/components/PeakHoursChart";
-import TopMenuItemsChart from "@/components/TopMenuItemsChart";
-import FinancialSummary from "@/components/FinancialSummary";
 import Image from "next/image";
-import { useState } from "react";
+import Link from "next/link";
+import { Rye } from "next/font/google";
 
-const predictionOptions = [2026, 2027, 2028, 2029, 2030];
+const rye = Rye({
+  subsets: ['latin'],
+  weight: '400',
+});
 
 export default function Home() {
-  const [predictionRange, setPredictionRange] = useState<number>(2026);
-
   return (
     <>
       <Navbar />
-      <main className="min-h-screen flex justify-center items-start p-8 pt-20">
-        <div className="bg-white/90 bg-opacity-90 rounded-lg shadow-lg max-w-7xl w-full p-8 space-y-8">
-          {/* Logo and Prediction Dropdown */}
-          <div className="flex flex-col items-center mb-8">
-            <Image
-              src="/saucy-sales-logo-removebg.png"
-              alt="Saucy Sales Logo"
-              width={280}
-              height={180}
-              className="h-33 w-35 mb-1"
-              priority
-            />
-            <div className="flex flex-col items-center gap-2">
-              <label htmlFor="prediction-range" className="font-semibold text-[#3e2c1c]">
-                Select prediction year:
-              </label>
-              <select
-                id="prediction-range"
-                value={predictionRange}
-                onChange={e => setPredictionRange(Number(e.target.value))}
-                className="border border-[#3e2c1c] rounded px-3 py-1"
-              >
-                {predictionOptions.map(year => (
-                  <option key={year} value={year}>{year} Forecast</option>
-                ))}
-              </select>
-            </div>
+      <main className="min-h-screen flex justify-center items-center pt-0 px-8">
+        <div className="bg-white/90 bg-opacity-90 rounded-lg shadow-lg max-w-7xl w-full p-9 flex flex-col items-center gap-4">
+          <Image
+            src="/saucy-sales-logo-removebg.png"
+            alt="Saucy Sales Logo"
+            width={320}
+            height={220}
+            className="mb-2"
+            priority
+          />
+          <div className="text-center">
+            <p className={`${rye.className} text-xl text-[#3e2c1c] font-medium`}>
+              Welcome to Saucy Sales!<br />
+              We specialize in delicious pizzas, pastas, and more. Our predictive model forecasts pizza sales to help optimize inventory, promotions, and customer satisfaction.
+            </p>
           </div>
-
-          {/* Charts */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <NetGainsChart predictionRange={predictionRange} />
-            <SeasonalTrendsChart predictionRange={predictionRange} />
-            <PeakHoursChart predictionRange={predictionRange} />
-            <TopMenuItemsChart predictionRange={predictionRange}/>
-          </div>
-
-          {/* Financial Summary */}
-          <FinancialSummary predictionRange={predictionRange} />
+          <Link href="/analytics">
+            <button className={`${rye.className} text-2xl font-bold text-white bg-[#3e2c1c] hover:bg-[#8b0000] transition-colors duration-300 px-6 py-3 rounded`}>
+              View Analytics
+            </button>
+          </Link>
         </div>
       </main>
     </>
