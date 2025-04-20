@@ -6,11 +6,9 @@ Download:
 
 npm install next
 npm install --save-dev @types/react
-
 npm install react react-dom next
 npm install -D tailwindcss postcss autoprefixer
 npm install @tailwindcss/forms
-
 npm install react-chartjs-2 chart.js react-select
 
 
