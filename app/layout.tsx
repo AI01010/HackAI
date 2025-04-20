@@ -24,11 +24,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+    <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+  <header className="flex justify-between items-center px-10 py-4 border-b-2 border-[#3e2c1c] bg-[#f5ecd9]/90">
+  <nav className="flex gap-8 text-lg font-semibold text-[#3e2c1c]">
+  <a href="/"className="relative block px-4 py-2 font-bold text-[#3e2c1c] transition duration-300 ease-in-out hover:bg-[#3e2c1c] hover:text-white hover:opacity-80 group rounded">HOME<span className="absolute left-0 bottom-0 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full"></span></a>
+
+  <a href="/"className="relative block px-4 py-2 font-bold text-[#3e2c1c] transition duration-300 ease-in-out hover:bg-[#3e2c1c] hover:text-white hover:opacity-80 group rounded">MENU<span className="absolute left-0 bottom-0 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full"></span></a>
+
+  <a href="/"className="relative block px-4 py-2 font-bold text-[#3e2c1c] transition duration-300 ease-in-out hover:bg-[#3e2c1c] hover:text-white hover:opacity-80 group rounded">OVERVIEW<span className="absolute left-0 bottom-0 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full"></span></a>
+ 
+  <a href="/"className="relative block px-4 py-2 font-bold text-[#3e2c1c] transition duration-300 ease-in-out hover:bg-[#3e2c1c] hover:text-white hover:opacity-80 group rounded">MONTH VIEW<span className="absolute left-0 bottom-0 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full"></span></a>
+
+  <a href="/"className="relative block px-4 py-2 font-bold text-[#3e2c1c] transition duration-300 ease-in-out hover:bg-[#3e2c1c] hover:text-white hover:opacity-80 group rounded">ABOUT US<span className="absolute left-0 bottom-0 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full"></span></a>
+    </nav>
+    <img src="/saucy-sales-logo-removebg.png" alt="Saucy Sales" className="h-12 w-auto"  style={{ transform: "scale(1.8)" }} />
+  </header>
+  <main className="px-10 py-8">{children}</main>
+</body>
     </html>
   );
 }

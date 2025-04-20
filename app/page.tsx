@@ -1,3 +1,21 @@
+export default function Home() {
+  return (
+    <main className = "min-h-screen bg-[#f5ecd9] text-[#3e2c1c] font-serif p-8">
+      <div className = "flex justify-between items-center">
+      <img src = "saucy-sales-logo-removebg.png" alt="Saucy-Sales-Logo" className="h-16 w-auto" />
+      </div>
+
+      <section className = "mt-10">
+        <p className = "text-xl max-w-2x1">
+          Welcome to the Saucy Sales Generator! We specialize in delicious pizzas, pastas, and more.
+          Using our predictive model, we forecast pizza sales based on various datasets to help optimize inventory, promotions, and customer satisfaction.
+        </p>
+      </section>
+    </main>
+  );
+}
+
+/*
 'use client'
 
 import Image from "next/image";
@@ -31,3 +49,4 @@ export default function Home() {
     </div>
   );
 }
+*/
