@@ -2,18 +2,19 @@
 
 import Navbar from "@/components/Navbar";
 import MenuItem from '@/components/MenuItem';
+import Image from 'next/image';
 
 const menuItems = [
-    { name: "Korean BE Pizza", description: "", price: 24.1, category: "Pizza", image: "/images/korean-be.jpg" },
-    { name: "Naga Hab Pizza", description: "", price: 23.34, category: "Pizza", image: "/images/naga-hab.jpg" },
-    { name: "Beef Taco Pizza", description: "", price: 22.96, category: "Pizza", image: "/images/beef-taco.jpg" },
-    { name: "Meatlover Pizza", description: "", price: 25.82, category: "Pizza", image: "/images/meatlover.jpg" },
+    { name: "Korean BE Pizza", description: "", price: 24.1, category: "Pizza", image: "/Korean-BBQ-Pizza.jpeg" },
+    { name: "Naga Hab Chicken Pizza", description: "", price: 23.34, category: "Pizza", image: "/Naga-Habanero-Chicken-Pizza.jpeg" },
+    { name: "Beef Taco Pizza", description: "", price: 22.96, category: "Pizza", image: "/Beef-Taco-Pizza.jpeg" },
+    { name: "Meatlover Pizza", description: "", price: 25.82, category: "Pizza", image: "/Meat-Lovers-Pizza.jpeg" },
     { name: "Beef Pepp Pizza", description: "", price: 20.92, category: "Pizza", image: "/images/beef-pepp.jpg" },
-    { name: "Harissa CI Pizza", description: "", price: 22.27, category: "Pizza", image: "/images/harissa-ci.jpg" },
+    { name: "Harissa CI Pizza", description: "", price: 22.27, category: "Pizza", image: "/Harissa-Chicken-Pizza.jpeg" },
     { name: "Bengali Be Pizza", description: "", price: 25.42, category: "Pizza", image: "/images/bengali-be.jpg" },
     { name: "Alfredo Ch Pizza", description: "", price: 20.58, category: "Pizza", image: "/images/alfredo-ch.jpg" },
     { name: "Naga Hab Pizza", description: "", price: 21.67, category: "Pizza", image: "/images/naga-hab.jpg" },
-    { name: "Naga Hab Pizza", description: "", price: 19.54, category: "Pizza", image: "/images/naga-hab.jpg" },
+    { name: "Naga Hab Mushroom Pizza", description: "", price: 19.54, category: "Pizza", image: "/Naga-Habanero-Mushroom-Pizza.jpeg" },
     { name: "Garlic Arti Pizza", description: "", price: 20.36, category: "Pizza", image: "/images/garlic-arti.jpg" },
     { name: "Garlic Ghe Pizza", description: "", price: 20.06, category: "Pizza", image: "/images/garlic-ghe.jpg" },
     { name: "Veggie Piz Pizza", description: "", price: 20.09, category: "Pizza", image: "/images/veggie-piz.jpg" },
@@ -21,7 +22,7 @@ const menuItems = [
     { name: "Classic Ch Pizza", description: "", price: 18.72, category: "Pizza", image: "/images/classic-ch.jpg" },
     { name: "Alfredo Ch Pizza", description: "", price: 19.06, category: "Pizza", image: "/images/alfredo-ch.jpg" },
     { name: "Margarita Pizza", description: "Classic tomato, mozzarella, and basil", price: 18.44, category: "Pizza", image: "/images/margherita.jpg" },
-    { name: "Naga Hab Pizza", description: "", price: 17.91, category: "Pizza", image: "/images/naga-hab.jpg" },
+    { name: "Naga Hab Balachao Pizza", description: "", price: 17.91, category: "Pizza", image: "/Naga-Habanero-Balachao-Pizza.jpeg" },
     { name: "Customize Pizza", description: "Choose your toppings!", price: 24.06, category: "Pizza", image: "/images/customize.jpg" },
     { name: "Half & Hal Pizza", description: "Two pizzas in one!", price: 26.08, category: "Pizza", image: "/images/half-hal.jpg" },
     { name: "Alfredo Pa Pizza", description: "", price: 12.64, category: "Pizza", image: "/images/alfredo-pa.jpg" },

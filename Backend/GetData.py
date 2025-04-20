@@ -1,11 +1,19 @@
 import base64
 import io
+from catboost import CatBoostRegressor
 from flask import Flask, request, jsonify
+import matplotlib
 import matplotlib.pyplot as plt
 from flask_cors import CORS
+import pandas as pd
+matplotlib.use('Agg')
 
 app = Flask(__name__)
 CORS(app)  # Allow cross-origin requests
+
+catBoostModel = CatBoostRegressor()
+catBoostModel.load_model('MlAlgos/catboost_model.cbm')
+
 
 @app.route('/python/getResults', methods=["POST"])
 def getResults():
@@ -32,6 +40,43 @@ def getResults():
 
     # should return the graph in base65 
     return jsonify({"success": True, "message": "GRAHHHH", "image": finalStr})
+
+@app.route("/python/GetTopFoods", methods=["POST"])
+def GetFoods():
+    data = request.get_json()
+    year = data["year"]
+    min = data["leftRange"]
+    max = data["rightRange"]
+    foodArr = list()
+    foodData = pd.read_csv("FinalData/IndividualFoodData.csv")
+    foodData = foodData.iloc[:, 0]
+    foodData = foodData[1:].drop_duplicates().to_list()
+    for food in foodData:
+        estCost = catBoostModel.predict([[food, year]])
+        estCost = estCost[0]
+        foodArr.append([food, estCost])
+    
+    sorted_foods = sorted(foodArr, key=lambda x: x[1], reverse=True)
+
+    foods, revenue = zip(*sorted_foods)
+
+    plt.bar(foods[min:max], revenue[min:max])
+    plt.ylim(revenue[max - 1] - 25, revenue[0] + 25)
+    plt.xlabel("Food")
+    plt.xticks(fontsize=6)
+    plt.ylabel("Revenue")
+    plt.title("Top Revenue-Generating Foods")
+    
+    imgBuffer = io.BytesIO()
+    plt.savefig(imgBuffer, format="png")
+    plt.close()
+    imgBuffer.seek(0)
+    finalStr = base64.b64encode(imgBuffer.read()).decode("utf-8")
+
+    return jsonify({"success": True, "message": "GRAHHHH", "image": finalStr, "numFoods": len(foodArr)})
+    
+
+    
 
 if __name__ == '__main__':
     print("app is running")
