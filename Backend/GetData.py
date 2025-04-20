@@ -45,6 +45,7 @@ def getResults():
 def GetFoods():
     data = request.get_json()
     year = data["year"]
+    print("Year: " + str(year))
     min = data["leftRange"]
     max = data["rightRange"]
     foodArr = list()
@@ -52,7 +53,7 @@ def GetFoods():
     foodData = foodData.iloc[:, 0]
     foodData = foodData[1:].drop_duplicates().to_list()
     for food in foodData:
-        estCost = catBoostModel.predict([[food, year]])
+        estCost = catBoostModel.predict([[food, int(year)]])
         estCost = estCost[0]
         foodArr.append([food, estCost])
     
@@ -72,6 +73,8 @@ def GetFoods():
     plt.close()
     imgBuffer.seek(0)
     finalStr = base64.b64encode(imgBuffer.read()).decode("utf-8")
+
+    print(revenue[0])
 
     return jsonify({"success": True, "message": "GRAHHHH", "image": finalStr, "numFoods": len(foodArr)})
     
