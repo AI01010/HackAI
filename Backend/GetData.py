@@ -2,9 +2,11 @@ import base64
 import io
 from catboost import CatBoostRegressor
 from flask import Flask, request, jsonify
+import matplotlib
 import matplotlib.pyplot as plt
 from flask_cors import CORS
 import pandas as pd
+matplotlib.use('Agg')
 
 app = Flask(__name__)
 CORS(app)  # Allow cross-origin requests
@@ -58,7 +60,9 @@ def GetFoods():
     foods, revenue = zip(*sorted_foods)
 
     plt.bar(foods[:maxFoods], revenue[:maxFoods])
+    plt.ylim(revenue[maxFoods - 1] - 50, revenue[0] + 50)
     plt.xlabel("Food")
+    plt.xticks(fontsize=6)
     plt.ylabel("Revenue")
     plt.title("Top Revenue-Generating Foods")
     

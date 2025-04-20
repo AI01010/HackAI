@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 type Props = {
@@ -15,11 +15,12 @@ export default function TopMenuItemsChart({ predictionRange }: Props) {
   const setTheTopFoods = async() => {
     const response = await axios.post("http://localhost:5000/python/GetTopFoods", {
       year: predictionRange,
-      topTaken: 10
+      topTaken: 5
     })
     const data = response.data
     if(data.success)
     {
+      console.log(data.message)
       setFoodChart(`data:image/png;base64,${data.image}`)
     }
     else
@@ -28,7 +29,9 @@ export default function TopMenuItemsChart({ predictionRange }: Props) {
     }
   }
 
-  setTheTopFoods();
+  useEffect(() => {
+    setTheTopFoods();
+  }, [predictionRange]); 
 
   return (
     <div className="bg-white p-4 rounded-lg shadow">
