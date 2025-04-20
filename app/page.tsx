@@ -24,9 +24,9 @@ export default function Home() {
             <Image
               src="/saucy-sales-logo-removebg.png"
               alt="Saucy Sales Logo"
-              width={180}
-              height={80}
-              className="h-20 w-auto mb-6"
+              width={280}
+              height={180}
+              className="h-33 w-35 mb-1"
               priority
             />
             <div className="flex flex-col items-center gap-2">
