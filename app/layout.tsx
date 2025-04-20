@@ -33,7 +33,6 @@ export default function RootLayout({
             alt="Background"
             fill
             style={{ objectFit: "cover" }}
-            placeholder="blur"
             priority
           />
         </div>

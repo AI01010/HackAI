@@ -1,4 +1,5 @@
 // components/MenuItem.tsx
+
 import Image from 'next/image';
 
 type MenuItem = {

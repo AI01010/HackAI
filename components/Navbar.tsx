@@ -6,8 +6,6 @@ import Link from "next/link";
 const navLinks = [
   { name: "HOME", path: "/" },
   { name: "MENU", path: "/menu" },
-  { name: "OVERVIEW", path: "/overview" },
-  { name: "MONTH VIEW", path: "/month" },
   { name: "ABOUT US", path: "/about" },
 ];
 

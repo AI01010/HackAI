@@ -1,4 +1,5 @@
 // app/menu/page.tsx
+import Navbar from "@/components/Navbar";
 import MenuItem from '@/components/MenuItem';
 
 // Mock data (replace with your actual data loading)
