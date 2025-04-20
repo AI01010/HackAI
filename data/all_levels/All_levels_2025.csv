@@ -1,0 +1,133 @@
+Type,Menu,Menu group,"Item, open item",Size modifier,"Modifiers, special requests",Sales Category,Item tags,Deferred,Qty sold,Avg. price,Avg. item price (not incl. mods),Gross sales,Discount amount,Refund amount,Void amount,Net sales,Tax,Waste count,Waste amount
+"",SauceBros POS,,,,,,,,2496.0,16.89,,42157.72,348.71,0.0,602.17,41809.01,3326.59,0.0,0.0
+"",SauceBros POS,Pizzas,,,,,,,1725.0,22.32,,38505.64,235.42,0.0,586.68,38270.22,3036.33,0.0,0.0
+menuItem,SauceBros POS,Pizzas,Korean BBQ,,,Pizza,[],false,84.0,23.79,0.82,1998.08,9.6,0.0,0.0,1988.48,152.79,0.0,0.0
+menuItem,SauceBros POS,Pizzas,Naga Habanero Chicken,,,Pizza,[],false,272.0,22.98,0.41,6250.85,70.07,0.0,89.96,6180.78,481.58,0.0,0.0
+menuItem,SauceBros POS,Pizzas,Beef Taco Pizza,,,Pizza,[],false,85.0,22.85,0.00,1942.09,13.18,0.0,21.99,1928.91,157.01,0.0,0.0
+menuItem,SauceBros POS,Pizzas,Meatlovers Pizza,,,Pizza,[],false,130.0,25.66,0.58,3336.36,34.74,0.0,23.99,3301.62,254.49,0.0,0.0
+menuItem,SauceBros POS,Pizzas,Beef Pepperoni,,,Pizza,[],false,215.0,19.68,0.09,4231.07,33.03,0.0,150.91,4198.04,309.39,0.0,0.0
+menuItem,SauceBros POS,Pizzas,Harissa Chicken,,,Pizza,[],false,95.0,21.73,0.44,2063.96,24.15,0.0,41.98,2039.81,166.38,0.0,0.0
+menuItem,SauceBros POS,Pizzas,Bengali Beef Pesto (Contains Nuts),,,Pizza,[],false,74.0,25.15,0.32,1861.2,4.8,0.0,23.99,1856.4,144.33,0.0,0.0
+menuItem,SauceBros POS,Pizzas,Alfredo Chicken,,,Pizza,[],false,39.0,20.22,0.56,788.53,6.0,0.0,0.0,782.53,64.59,0.0,0.0
+menuItem,SauceBros POS,Pizzas,Naga Habanero Paneer,,,Pizza,[],false,36.0,21.21,0.00,763.6,0.0,0.0,19.99,763.6,63.06,0.0,0.0
+menuItem,SauceBros POS,Pizzas,Naga Habanero Mushroom,,,Pizza,[],false,35.0,19.42,0.00,679.53,0.0,0.0,17.99,679.53,55.97,0.0,0.0
+menuItem,SauceBros POS,Pizzas,Garlic Artichoke,,,Pizza,[],false,25.0,20.75,0.00,518.66,0.0,0.0,0.0,518.66,42.81,0.0,0.0
+menuItem,SauceBros POS,Pizzas,Garlic Ghee Mushroom,,,Pizza,[],false,40.0,19.46,0.00,778.45,3.6,0.0,0.0,774.85,63.83,0.0,0.0
+menuItem,SauceBros POS,Pizzas,Veggie Pizza,,,Pizza,[],false,65.0,19.74,0.38,1283.03,4.6,0.0,17.99,1278.43,103.74,0.0,0.0
+menuItem,SauceBros POS,Pizzas,4Cheez with Hot Honey,,,Pizza,[],false,43.0,19.50,0.91,838.43,0.0,0.0,17.99,838.43,69.05,0.0,0.0
+menuItem,SauceBros POS,Pizzas,Classic Cheese Pizza,,,Pizza,[],false,137.0,18.17,0.26,2489.32,15.62,0.0,97.92,2473.7,192.37,0.0,0.0
+menuItem,SauceBros POS,Pizzas,Alfredo Cheese Pizza,,,Pizza,[],false,14.0,19.27,0.00,269.74,3.4,0.0,0.0,266.34,21.99,0.0,0.0
+menuItem,SauceBros POS,Pizzas,Margarita,,,Pizza,[],false,22.0,18.44,0.86,405.71,0.0,0.0,18.99,405.71,33.49,0.0,0.0
+menuItem,SauceBros POS,Pizzas,Naga Habanero Balachao,,,Pizza,[],false,18.0,17.55,0.94,315.82,0.0,0.0,16.99,315.82,26.05,0.0,0.0
+menuItem,SauceBros POS,Pizzas,Customized Pizza,,,Pizza,[],false,11.0,23.42,2.45,257.59,0.0,0.0,0.0,257.59,21.25,0.0,0.0
+menuItem,SauceBros POS,Pizzas,Half & Half,,,Pizza,[],false,285.0,26.08,0.44,7433.62,12.63,0.0,26.0,7420.99,612.16,0.0,0.0
+"",SauceBros POS,Pasta,,,,,,,108.0,12.34,,1333.07,16.30,0.0,0.0,1316.77,108.50,0.0,0.0
+menuItem,SauceBros POS,Pasta,Alfredo Pasta,,,Pizza,[],false,63.0,12.60,9.99,793.82,3.25,0.0,0.0,790.57,65.15,0.0,0.0
+menuItem,SauceBros POS,Pasta,Tomato Basil Pasta,,,Pizza,[],false,26.0,11.60,9.91,301.6,9.81,0.0,0.0,291.79,24.03,0.0,0.0
+menuItem,SauceBros POS,Pasta,Naga Habanero Pasta,,,Pizza,[],false,19.0,12.51,9.99,237.65,3.24,0.0,0.0,234.41,19.32,0.0,0.0
+"",SauceBros POS,Wraps,,,,,,,158.0,8.08,,1277.37,96.99,0.0,7.99,1180.38,97.47,0.0,0.0
+menuItem,SauceBros POS,Wraps,Beef Chopped Cheese,,,Pizza,[],false,55.0,8.10,7.96,445.43,1.6,0.0,7.99,443.83,36.65,0.0,0.0
+menuItem,SauceBros POS,Wraps,Chicken Wrap,,,Pizza,[],false,94.0,8.05,7.97,757.04,91.6,0.0,0.0,665.44,54.95,0.0,0.0
+menuItem,SauceBros POS,Wraps,Mushroom Wrap,,,Pizza,[],false,4.0,8.74,8.19,34.95,3.79,0.0,0.0,31.16,2.57,0.0,0.0
+menuItem,SauceBros POS,Wraps,Paneer Wrap,,,Pizza,[],false,5.0,7.99,7.99,39.95,0.0,0.0,0.0,39.95,3.3,0.0,0.0
+"",SauceBros POS,Drinks,,,,,,,364.0,2.36,,860.05,0.0,0.0,7.5,860.05,69.56,0.0,0.0
+menuItem,SauceBros POS,Drinks,Soda (Can),,,Pizza,[],false,266.0,2.50,2.50,665.0,0.0,0.0,7.5,665.0,53.68,0.0,0.0
+menuItem,SauceBros POS,Drinks,Water (small),,,Pizza,[],false,98.0,1.99,1.99,195.05,0.0,0.0,0.0,195.05,15.88,0.0,0.0
+"",SauceBros POS,Side,,,,,,,141.0,1.29,,181.59,0.0,0.0,0.0,181.59,14.73,0.0,0.0
+menuItem,SauceBros POS,Side,Hot Honey,,,Pizza,[],false,16.0,1.99,1.99,31.84,0.0,0.0,0.0,31.84,2.56,0.0,0.0
+menuItem,SauceBros POS,Side,Ranch,,,Pizza,[],false,71.0,0.99,0.99,70.29,0.0,0.0,0.0,70.29,5.74,0.0,0.0
+menuItem,SauceBros POS,Side,Naga Dip,,,Pizza,[],false,19.0,1.99,1.99,37.81,0.0,0.0,0.0,37.81,3.04,0.0,0.0
+menuItem,SauceBros POS,Side,Red Peppers Bags 3,,,Pizza,[],false,5.0,0.99,0.99,4.95,0.0,0.0,0.0,4.95,0.41,0.0,0.0
+menuItem,SauceBros POS,Side,Parmesan Bags 3,,,Pizza,[],false,4.0,0.99,0.99,3.96,0.0,0.0,0.0,3.96,0.33,0.0,0.0
+menuItem,SauceBros POS,Side,Side Olives,,,Pizza,[],false,2.0,0.99,0.99,1.98,0.0,0.0,0.0,1.98,0.16,0.0,0.0
+menuItem,SauceBros POS,Side,Side Jalapeno,,,Pizza,[],false,1.0,0.99,0.99,0.99,0.0,0.0,0.0,0.99,0.08,0.0,0.0
+menuItem,SauceBros POS,Side,Side Garlic Mayo,,,Pizza,[],false,16.0,0.99,0.99,15.84,0.0,0.0,0.0,15.84,1.29,0.0,0.0
+menuItem,SauceBros POS,Side,Marinara Sauce,,,Pizza,[],false,7.0,1.99,1.99,13.93,0.0,0.0,0.0,13.93,1.12,0.0,0.0
+"",SauceBros Catering,,,,,,,,15.0,12.00,,180.0,0.0,0.0,0.0,180.0,0.0,0.0,0.0
+"",SauceBros Catering,Pizza,,,,,,,15.0,12.00,,180.0,0.0,0.0,0.0,180.0,0.0,0.0,0.0
+menuItem,SauceBros Catering,Pizza,"14"" Pie",,,Pizza,[],false,15.0,12.00,12.00,180.0,0.0,0.0,0.0,180.0,0.0,0.0,0.0
+"",All Day Menu,,,,,,,,2307.0,17.72,,40873.63,0.0,0.0,60.97,40873.63,3370.90,0.0,0.0
+"",All Day Menu,Pizzas,,,,,,,1782.0,21.82,,38883.14,0.0,0.0,60.97,38883.14,3207.55,0.0,0.0
+menuItem,All Day Menu,Pizzas,Classic Cheese Pizza,,,,[],false,214.0,18.31,0.50,3919.39,0.0,0.0,0.0,3919.39,323.36,0.0,0.0
+menuItem,All Day Menu,Pizzas,Alfredo Cheese Pizza,,,,[],false,19.0,18.62,0.00,353.7,0.0,0.0,16.99,353.7,29.18,0.0,0.0
+menuItem,All Day Menu,Pizzas,4Cheez with Hot Honey,,,,[],false,72.0,20.26,0.25,1459.0,0.0,0.0,0.0,1459.0,120.22,0.0,0.0
+menuItem,All Day Menu,Pizzas,Naga Habanero Mushroom,,,,[],false,42.0,19.37,0.43,813.49,0.0,0.0,0.0,813.49,66.99,0.0,0.0
+menuItem,All Day Menu,Pizzas,Garlic Ghee Mushroom,,,,[],false,71.0,20.08,0.56,1425.92,0.0,0.0,0.0,1425.92,117.51,0.0,0.0
+menuItem,All Day Menu,Pizzas,Veggie Pizza,,,,[],false,96.0,19.78,0.48,1898.57,0.0,0.0,0.0,1898.57,156.49,0.0,0.0
+menuItem,All Day Menu,Pizzas,Naga Habanero Chicken,,,,[],false,212.0,23.23,0.64,4924.35,0.0,0.0,21.99,4924.35,405.95,0.0,0.0
+menuItem,All Day Menu,Pizzas,Alfredo Chicken,,,,[],false,34.0,20.66,0.56,702.54,0.0,0.0,0.0,702.54,58.01,0.0,0.0
+menuItem,All Day Menu,Pizzas,Naga Habanero Balachao,,,,[],false,33.0,17.75,0.00,585.64,0.0,0.0,0.0,585.64,48.3,0.0,0.0
+menuItem,All Day Menu,Pizzas,Beef Pepperoni,,,,[],false,266.0,20.74,0.31,5517.79,0.0,0.0,0.0,5517.79,455.21,0.0,0.0
+menuItem,All Day Menu,Pizzas,Bengali Beef Pesto (Contains Nuts),,,,[],false,137.0,25.24,0.00,3457.4,0.0,0.0,0.0,3457.4,285.41,0.0,0.0
+menuItem,All Day Menu,Pizzas,Meatlovers Pizza,,,,[],false,201.0,25.63,1.04,5151.65,0.0,0.0,0.0,5151.65,425.32,0.0,0.0
+menuItem,All Day Menu,Pizzas,Customized Pizza,,,,[],false,29.0,24.30,1.76,704.8,0.0,0.0,0.0,704.8,58.18,0.0,0.0
+menuItem,All Day Menu,Pizzas,Beef Taco Pizza,,,,[],false,89.0,22.70,0.25,2020.09,0.0,0.0,21.99,2020.09,166.44,0.0,0.0
+menuItem,All Day Menu,Pizzas,Harissa Chicken,,,,[],false,109.0,21.96,0.77,2393.76,0.0,0.0,0.0,2393.76,197.5,0.0,0.0
+menuItem,All Day Menu,Pizzas,Naga Habanero Paneer,,,,[],false,52.0,21.53,0.44,1119.33,0.0,0.0,0.0,1119.33,92.41,0.0,0.0
+menuItem,All Day Menu,Pizzas,Garlic Artichoke,,,,[],false,29.0,19.92,0.00,577.64,0.0,0.0,0.0,577.64,47.7,0.0,0.0
+menuItem,All Day Menu,Pizzas,Korean BBQ,,,,[],false,77.0,24.13,0.60,1858.08,0.0,0.0,0.0,1858.08,153.37,0.0,0.0
+"",All Day Menu,Pasta,,,,,,,66.0,12.21,,805.85,0.0,0.0,0.0,805.85,66.37,0.0,0.0
+menuItem,All Day Menu,Pasta,Alfredo Pasta,,,,[],false,28.0,12.66,9.99,354.47,0.0,0.0,0.0,354.47,29.21,0.0,0.0
+menuItem,All Day Menu,Pasta,Tomato Basil Pasta,,,,[],false,22.0,11.89,9.99,261.64,0.0,0.0,0.0,261.64,21.54,0.0,0.0
+menuItem,All Day Menu,Pasta,Naga Habanero Pasta,,,,[],false,16.0,11.86,9.99,189.74,0.0,0.0,0.0,189.74,15.62,0.0,0.0
+"",All Day Menu,Wraps,,,,,,,71.0,8.20,,582.24,0.0,0.0,0.0,582.24,48.09,0.0,0.0
+menuItem,All Day Menu,Wraps,Beef Chopped Cheese,,,,[],false,31.0,8.38,7.99,259.65,0.0,0.0,0.0,259.65,21.44,0.0,0.0
+menuItem,All Day Menu,Wraps,Chicken Wrap,,,,[],false,31.0,7.99,7.99,247.69,0.0,0.0,0.0,247.69,20.46,0.0,0.0
+menuItem,All Day Menu,Wraps,Mushroom Wrap,,,,[],false,4.0,7.99,7.99,31.96,0.0,0.0,0.0,31.96,2.64,0.0,0.0
+menuItem,All Day Menu,Wraps,Paneer Wrap,,,,[],false,5.0,8.59,7.99,42.94,0.0,0.0,0.0,42.94,3.55,0.0,0.0
+"",All Day Menu,Drinks,,,,,,,37.0,2.38,,87.91,0.0,0.0,0.0,87.91,7.13,0.0,0.0
+menuItem,All Day Menu,Drinks,Soda (Can),,,,[],false,28.0,2.50,2.50,70.0,0.0,0.0,0.0,70.0,5.66,0.0,0.0
+menuItem,All Day Menu,Drinks,Water (small),,,,[],false,9.0,1.99,1.99,17.91,0.0,0.0,0.0,17.91,1.47,0.0,0.0
+"",All Day Menu,Side,,,,,,,351.0,1.47,,514.49,0.0,0.0,0.0,514.49,41.76,0.0,0.0
+menuItem,All Day Menu,Side,Hot Honey,,,,[],false,77.0,1.99,1.99,153.23,0.0,0.0,0.0,153.23,12.38,0.0,0.0
+menuItem,All Day Menu,Side,Ranch,,,,[],false,161.0,0.99,0.99,159.39,0.0,0.0,0.0,159.39,13.06,0.0,0.0
+menuItem,All Day Menu,Side,Naga Dip,,,,[],false,90.0,1.99,1.99,179.1,0.0,0.0,0.0,179.1,14.48,0.0,0.0
+menuItem,All Day Menu,Side,Red Peppers Bags 3,,,,[],false,3.0,0.99,0.99,2.97,0.0,0.0,0.0,2.97,0.24,0.0,0.0
+menuItem,All Day Menu,Side,Parmesan Bags 3,,,,[],false,7.0,0.99,0.99,6.93,0.0,0.0,0.0,6.93,0.56,0.0,0.0
+menuItem,All Day Menu,Side,Side Olives,,,,[],false,10.0,0.99,0.99,9.9,0.0,0.0,0.0,9.9,0.8,0.0,0.0
+menuItem,All Day Menu,Side,Side Jalapeno,,,,[],false,3.0,0.99,0.99,2.97,0.0,0.0,0.0,2.97,0.24,0.0,0.0
+"",Doordash Menu,,,,,,,,699.0,18.11,,12657.20,0.0,0.0,0.0,12657.20,1044.04,0.0,0.0
+"",Doordash Menu,Pizzas,,,,,,,495.0,23.89,,11827.44,0.0,0.0,0.0,11827.44,975.79,0.0,0.0
+menuItem,Doordash Menu,Pizzas,Classic Cheese Pizza,,,,[],false,63.0,21.30,0.60,1342.06,0.0,0.0,0.0,1342.06,110.74,0.0,0.0
+menuItem,Doordash Menu,Pizzas,Alfredo Cheese Pizza,,,,[],false,4.0,20.49,0.00,81.96,0.0,0.0,0.0,81.96,6.76,0.0,0.0
+menuItem,Doordash Menu,Pizzas,4Cheez with Hot Honey,,,,[],false,20.0,21.59,0.00,431.74,0.0,0.0,0.0,431.74,35.66,0.0,0.0
+menuItem,Doordash Menu,Pizzas,Naga Habanero Mushroom,,,,[],false,4.0,22.49,0.00,89.94,0.0,0.0,0.0,89.94,7.43,0.0,0.0
+menuItem,Doordash Menu,Pizzas,Garlic Ghee Mushroom,,,,[],false,27.0,20.91,1.48,564.58,0.0,0.0,0.0,564.58,46.61,0.0,0.0
+menuItem,Doordash Menu,Pizzas,Veggie Pizza,,,,[],false,23.0,22.38,1.09,514.65,0.0,0.0,0.0,514.65,42.47,0.0,0.0
+menuItem,Doordash Menu,Pizzas,Naga Habanero Chicken,,,,[],false,67.0,25.18,0.36,1687.2,0.0,0.0,0.0,1687.2,139.27,0.0,0.0
+menuItem,Doordash Menu,Pizzas,Alfredo Chicken,,,,[],false,12.0,21.49,0.00,257.88,0.0,0.0,0.0,257.88,21.3,0.0,0.0
+menuItem,Doordash Menu,Pizzas,Naga Habanero Balachao,,,,[],false,3.0,21.98,0.00,65.94,0.0,0.0,0.0,65.94,5.44,0.0,0.0
+menuItem,Doordash Menu,Pizzas,Beef Pepperoni,,,,[],false,103.0,23.95,0.24,2466.53,0.0,0.0,0.0,2466.53,203.34,0.0,0.0
+menuItem,Doordash Menu,Pizzas,Bengali Beef Pesto (Contains Nuts),,,,[],false,35.0,26.68,1.49,933.63,0.0,0.0,0.0,933.63,76.94,0.0,0.0
+menuItem,Doordash Menu,Pizzas,Meatlovers Pizza,,,,[],false,40.0,27.29,0.00,1091.46,0.0,0.0,0.0,1091.46,90.05,0.0,0.0
+menuItem,Doordash Menu,Pizzas,Harissa Chicken,,,,[],false,41.0,24.38,0.00,999.48,0.0,0.0,0.0,999.48,82.52,0.0,0.0
+menuItem,Doordash Menu,Pizzas,Beef Taco Pizza,,,,[],false,20.0,24.64,0.00,492.79,0.0,0.0,0.0,492.79,40.66,0.0,0.0
+menuItem,Doordash Menu,Pizzas,Naga Habanero Paneer,,,,[],false,13.0,23.52,0.00,305.82,0.0,0.0,0.0,305.82,25.22,0.0,0.0
+menuItem,Doordash Menu,Pizzas,Korean BBQ,,,,[],false,18.0,25.43,0.00,457.81,0.0,0.0,0.0,457.81,37.75,0.0,0.0
+menuItem,Doordash Menu,Pizzas,Garlic Artichoke,,,,[],false,2.0,21.99,0.00,43.97,0.0,0.0,0.0,43.97,3.63,0.0,0.0
+"",Doordash Menu,Pasta,,,,,,,27.0,12.20,,329.53,0.0,0.0,0.0,329.53,27.14,0.0,0.0
+menuItem,Doordash Menu,Pasta,Alfredo Pasta,,,,[],false,15.0,12.78,10.19,191.71,0.0,0.0,0.0,191.71,15.8,0.0,0.0
+menuItem,Doordash Menu,Pasta,Tomato Basil Pasta,,,,[],false,6.0,10.99,9.99,65.92,0.0,0.0,0.0,65.92,5.42,0.0,0.0
+menuItem,Doordash Menu,Pasta,Naga Habanero Pasta,,,,[],false,6.0,11.98,9.99,71.9,0.0,0.0,0.0,71.9,5.92,0.0,0.0
+"",Doordash Menu,Wraps,,,,,,,20.0,10.99,,219.80,0.0,0.0,0.0,219.80,18.18,0.0,0.0
+menuItem,Doordash Menu,Wraps,Beef Chopped Cheese,,,,[],false,4.0,10.99,10.99,43.96,0.0,0.0,0.0,43.96,3.64,0.0,0.0
+menuItem,Doordash Menu,Wraps,Chicken Wrap,,,,[],false,14.0,10.99,10.99,153.86,0.0,0.0,0.0,153.86,12.72,0.0,0.0
+menuItem,Doordash Menu,Wraps,Mushroom Wrap,,,,[],false,2.0,10.99,10.99,21.98,0.0,0.0,0.0,21.98,1.82,0.0,0.0
+"",Doordash Menu,Drinks,,,,,,,35.0,2.93,,102.65,0.0,0.0,0.0,102.65,8.51,0.0,0.0
+menuItem,Doordash Menu,Drinks,Soda (Can),,,,[],false,33.0,2.99,2.99,98.67,0.0,0.0,0.0,98.67,8.19,0.0,0.0
+menuItem,Doordash Menu,Drinks,Water (small),,,,[],false,2.0,1.99,1.99,3.98,0.0,0.0,0.0,3.98,0.32,0.0,0.0
+"",Doordash Menu,Side,,,,,,,122.0,1.46,,177.78,0.0,0.0,0.0,177.78,14.42,0.0,0.0
+menuItem,Doordash Menu,Side,Hot Honey,,,,[],false,13.0,1.99,1.99,25.87,0.0,0.0,0.0,25.87,2.09,0.0,0.0
+menuItem,Doordash Menu,Side,Ranch,,,,[],false,52.0,0.99,0.99,51.48,0.0,0.0,0.0,51.48,4.23,0.0,0.0
+menuItem,Doordash Menu,Side,Naga Dip,,,,[],false,29.0,1.99,1.99,57.71,0.0,0.0,0.0,57.71,4.65,0.0,0.0
+menuItem,Doordash Menu,Side,Aged Parmesan,,,,[],false,15.0,1.99,1.99,29.85,0.0,0.0,0.0,29.85,2.41,0.0,0.0
+menuItem,Doordash Menu,Side,Red Peppers Bags 3,,,,[],false,2.0,0.99,0.99,1.98,0.0,0.0,0.0,1.98,0.16,0.0,0.0
+menuItem,Doordash Menu,Side,Parmesan Bags 3,,,,[],false,4.0,0.99,0.99,3.96,0.0,0.0,0.0,3.96,0.32,0.0,0.0
+menuItem,Doordash Menu,Side,Side Olives,,,,[],false,3.0,0.99,0.99,2.97,0.0,0.0,0.0,2.97,0.24,0.0,0.0
+menuItem,Doordash Menu,Side,Side Cilantro,,,,[],false,1.0,0.99,0.99,0.99,0.0,0.0,0.0,0.99,0.08,0.0,0.0
+menuItem,Doordash Menu,Side,Side Basil,,,,[],false,3.0,0.99,0.99,2.97,0.0,0.0,0.0,2.97,0.24,0.0,0.0
+"",Open items,,,,,,,,510.0,6.80,,3470.0,0.0,0.0,0.0,3470.0,0.0,0.0,0.0
+"",Open items,Open Food,,,,,,,510.0,6.80,,3470.0,0.0,0.0,0.0,3470.0,0.0,0.0,0.0
+openItem,Open items,Open Food,Naga Chicken,,,,[],false,5.0,18.00,18.00,90.0,0.0,0.0,0.0,90.0,0.0,0.0,0.0
+openItem,Open items,Open Food,Pepperoni,,,,[],false,5.0,16.00,16.00,80.0,0.0,0.0,0.0,80.0,0.0,0.0,0.0
+openItem,Open items,Open Food,Wrap,,,,[],false,500.0,6.60,6.60,3300.0,0.0,0.0,0.0,3300.0,0.0,0.0,0.0
