@@ -1,8 +1,8 @@
 'use client';
 
 import { Line } from 'react-chartjs-2';
-
-const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 type Props = {
   predictionRange: number;
@@ -10,28 +10,32 @@ type Props = {
 
 export default function SeasonalTrendsChart({ predictionRange }: Props) {
   // Always show actual data for 2023-2025
-  const baseYears = [2023, 2024, 2025];
-  // If predictionRange is greater than 2025, add it as the forecast year
-  const years = predictionRange > 2025 ? [...baseYears, predictionRange] : baseYears;
+    const [monthChart, setMonthChart] = useState("")
 
-  const colors = ['#ef4444', '#3b82f6', '#10b981', '#f59e0b'];
-  const baseData = [120, 140, 160, 190, 210, 240, 230, 220, 200, 180, 160, 140];
-
-  const datasets = years.map((year, i) => ({
-    label: `${year}`,
-    data: baseData.map(x =>
-      year <= 2025
-        ? x * 1000 + (year - 2023) * 5000
-        : x * 1000 + (predictionRange - 2025) * 7000 // forecast logic for predicted year
-    ),
-    borderColor: colors[i % colors.length],
-    fill: false,
-  }));
+    const setMonthData = async() => {
+      const response = await axios.post("http://localhost:5000/python/GetMonthlySales", {
+        year: predictionRange,
+      })
+      const data = response.data
+      if(data.success)
+      {
+        console.log(data.message)
+        setMonthChart(`data:image/png;base64,${data.image}`)
+      }
+      else
+      {
+        alert("Error while getting top foods in year " + structuredClone(predictionRange) + "!");
+      }
+    }
+  
+    useEffect(() => {
+      setMonthData();
+    }, [predictionRange]); 
 
   return (
     <div className="bg-white p-4 rounded-lg shadow">
-      <h3 className="text-xl font-bold mb-4">Seasonal Sales Pattern</h3>
-      <Line data={{ labels: months, datasets }} />
+      <h3 className="text-xl font-bold mb-4">Monthly Sales Pattern</h3>
+      <img src={monthChart} className="w-full" />
     </div>
   );
 }
