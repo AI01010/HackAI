@@ -36,3 +36,5 @@ financial summary + suggestions??
 - Another with inputs time of day, and total money made on average at that time. Used to find most busy times during a typical day. We either do this for all 24 hours of a day, or user selects an hour of the day they want to check it for
 
 - Another model where inputs are food, and outputs are the expected revenue. Then, gets their expectd revnue for the next years, like 2026. BUT THEN, user can define another food. Now, what we'll do is use some RAG tomfoolery to decide which current foods it's already closest to, and then gets its expected revenue that way 
+
+- One for general food groups, like pizzas as a whole and their revenue, same as the food one but more broad foods.
