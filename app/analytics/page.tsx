@@ -50,12 +50,12 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <NetGainsChart predictionRange={predictionRange} />
             <SeasonalTrendsChart predictionRange={predictionRange} />
-            <PeakHoursChart predictionRange={predictionRange} />
-            <TopMenuItemsChart predictionRange={predictionRange}/>
+            {/* <PeakHoursChart predictionRange={predictionRange} /> */}
+            {/* <TopMenuItemsChart predictionRange={predictionRange}/> */}
           </div>
 
           {/* Financial Summary */}
-          <FinancialSummary predictionRange={predictionRange} />
+          {/* <FinancialSummary predictionRange={predictionRange} /> */}
         </div>
       </main>
     </>
