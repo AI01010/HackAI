@@ -5,8 +5,10 @@ Sales&Sause Bros
 ## 04.19.2025 12:00 CodingSession::BEGIN
 
 Added devlog, readme, and files
-front end
+front end, work continued w/ mock data
+add more metrics?
 
+##
 
 UI: 
 
