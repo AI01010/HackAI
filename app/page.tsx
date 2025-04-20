@@ -1,7 +1,7 @@
 'use client';
 
 import Navbar from "@/components/Navbar";
-import NetGainsChart from "@/components/NetGainsChart";
+import NetGainsChart from "@/components/NetGainsChat";
 import SeasonalTrendsChart from "@/components/SeasonalTrendsChart";
 import PeakHoursChart from "@/components/PeakHoursChart";
 import TopMenuItemsChart from "@/components/TopMenuItemsChart";
