@@ -53,7 +53,7 @@ export default function About() {
                 <strong>Visualization:</strong> Leveraged Chart.js for dynamic and interactive data visualizations.
               </li>
               <li>
-                <strong>Backend & Data:</strong> Integrated data from CSV files and used Python (with libraries like Prophet, pandas, and CatBoost) for robust forecasting.
+                <strong>Backend & Data:</strong> Integrated data from CSV files and used Python (with libraries like pandas, and CatBoost) for robust forecasting.
               </li>
               <li>
                 <strong>APIs & Integration:</strong> Incorporated REST API endpoints (via Axios) to connect the forecasting models with the frontend.
