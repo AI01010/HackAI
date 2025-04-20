@@ -21,9 +21,38 @@
 
 body {
   @apply font-serif;
-  background-image: url('/background-image.png');
-  background-repeat: repeat;
-  background-size: 300px;
   background-color: #f7d897;
   color: #3e2c1c;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Animated tiled background */
+.bg-animated {
+  /* Set the background image, with a smaller size for a more zoomed-out effect */
+  background-image: url('/background-image.png');
+  background-size: 25%; /* Changed from 50% to 25% */
+  background-repeat: repeat;
+  
+  /* Animate horizontal scrolling by changing background-position */
+  animation: horizontalScroll 60s linear infinite;
+}
+
+@keyframes horizontalScroll {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+
+.background-img {
+  animation: horizontalScroll 30s ease-in-out infinite;
+  transform-origin: center;
+  will-change: transform;
 }
