@@ -20,8 +20,7 @@ export default function TopMenuItemsChart({ predictionRange }: Props) {
     const data = response.data
     if(data.success)
     {
-      console.log(data.message)
-      // setFoodChart(`data:image/png;base64,${data.image}`)
+      setFoodChart(`data:image/png;base64,${data.image}`)
     }
     else
     {

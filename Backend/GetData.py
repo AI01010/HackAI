@@ -10,7 +10,7 @@ app = Flask(__name__)
 CORS(app)  # Allow cross-origin requests
 
 catBoostModel = CatBoostRegressor()
-catBoostModel.load_model('./../MlAlgos/catboost_model.cbm')
+catBoostModel.load_model('MlAlgos/catboost_model.cbm')
 
 
 @app.route('/python/getResults', methods=["POST"])
@@ -45,16 +45,31 @@ def GetFoods():
     year = data["year"]
     maxFoods = data["topTaken"]
     foodArr = list()
-    foodData = pd.read_csv("../FinalData/IndividualFoodData.csv")
+    foodData = pd.read_csv("FinalData/IndividualFoodData.csv")
     foodData = foodData.iloc[:, 0]
     foodData = foodData[1:].drop_duplicates().to_list()
     for food in foodData:
-        estCost = catBoostModel.predict([food, year])[0]
+        estCost = catBoostModel.predict([[food, year]])
+        estCost = estCost[0]
         foodArr.append([food, estCost])
     
     sorted_foods = sorted(foodArr, key=lambda x: x[1], reverse=True)
-    return jsonify({"success": True, "message": sorted_foods})
 
+    foods, revenue = zip(*sorted_foods)
+
+    plt.bar(foods[:maxFoods], revenue[:maxFoods])
+    plt.xlabel("Food")
+    plt.ylabel("Revenue")
+    plt.title("Top Revenue-Generating Foods")
+    
+    imgBuffer = io.BytesIO()
+    plt.savefig(imgBuffer, format="png")
+    plt.close()
+    imgBuffer.seek(0)
+    finalStr = base64.b64encode(imgBuffer.read()).decode("utf-8")
+
+    return jsonify({"success": True, "message": "GRAHHHH", "image": finalStr})
+    
 
     
 
