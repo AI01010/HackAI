@@ -19,7 +19,7 @@ export default function About() {
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-2">🍕 Inspiration</h2>
             <p>
-              Pizza shops throw away <strong>$1.9B annually in food waste</strong> while struggling with staffing during peak hours.
+              Pizza shops throw away <strong>$1.3B annually in food waste</strong> while struggling with staffing during peak hours.
               We built Saucy Sales after discovering Sauce Bros' need for better demand forecasting in their order data.
               The final push came from seeing <strong>78% of pizza operators</strong> cite "inventory optimization" as their top challenge in the 2025 industry report.
             </p>
