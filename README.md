@@ -2,9 +2,6 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-Download (if needed):
-npm install axios @mui/material @emotion/react @emotion/styled
-
 First, run the development server:
 
 ```bash
