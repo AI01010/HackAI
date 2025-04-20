@@ -2,20 +2,36 @@
 
 import { Bar } from 'react-chartjs-2';
 
-const times = ['8AM','10AM','12PM','2PM','4PM','6PM','8PM'];
+type Props = {
+  predictionRange: number;
+};
 
-export default function PeakHoursChart() {
-  // Mock: Each year has a slightly different peak
-  const datasets = [2023, 2024, 2025].map((year, i) => ({
-    label: `${year}`,
-    data: [50, 180, 420, 300, 280, 450, 380].map(x => x + i * 15),
-    backgroundColor: ['#f59e0b', '#6366f1', '#22d3ee'][i % 3],
-  }));
+export default function PeakHoursChart({ predictionRange }: Props) {
+  const startYear = 2023;
+  const years: number[] = [];
+  for (let y = startYear; y <= predictionRange; y++) {
+    years.push(y);
+  }
+
+  const data = {
+    labels: years,
+    datasets: [
+      {
+        label: 'Peak Orders',
+        data: years.map((year) =>
+          year <= 2025
+            ? 100 + (year - startYear) * 20
+            : 140 + (year - 2025) * 30
+        ),
+        backgroundColor: '#6366f1',
+      },
+    ],
+  };
 
   return (
     <div className="bg-white p-4 rounded-lg shadow">
       <h3 className="text-xl font-bold mb-4">Peak Order Hours</h3>
-      <Bar data={{ labels: times, datasets }} />
+      <Bar data={data} />
     </div>
   );
 }

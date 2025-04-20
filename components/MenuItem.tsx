@@ -31,9 +31,9 @@ const MenuItem: React.FC<MenuItemProps> = ({ item }) => {
             <p className="text-gray-600 mb-2">{item.description}</p>
             <div className="mt-auto flex justify-between items-center">
                 <span className="text-gray-900 font-bold">${item.price.toFixed(2)}</span>
-                <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+                {/* <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
                     Add to Cart
-                </button>
+                </button> */}
             </div>
         </div>
     );

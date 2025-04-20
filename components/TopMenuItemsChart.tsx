@@ -2,14 +2,34 @@
 
 import { Bar } from 'react-chartjs-2';
 
-const items = ['BBQ Chicken','Pepperoni','Margherita','Hawaiian','Meatlovers','Veggie','Supreme','Buffalo','Four Cheese','Pesto'];
+const items = [
+  'BBQ Chicken',
+  'Pepperoni',
+  'Margherita',
+  'Hawaiian',
+  'Meatlovers',
+  'Veggie',
+  'Supreme',
+  'Buffalo',
+  'Four Cheese',
+  'Pesto'
+];
 
-export default function TopMenuItemsChart() {
-  // Mock: Each year has slightly different sales
-  const datasets = [2023, 2024, 2025].map((year, i) => ({
+type Props = {
+  predictionRange: number;
+};
+
+export default function TopMenuItemsChart({ predictionRange }: Props) {
+  const baseYears = [2023, 2024, 2025];
+  const years = predictionRange > 2025 ? [...baseYears, predictionRange] : baseYears;
+
+  const baseData = [1200, 1100, 980, 850, 800, 750, 700, 650, 600, 550];
+  const colors = ['#10b981', '#ef4444', '#3b82f6', '#f59e0b'];
+
+  const datasets = years.map((year, i) => ({
     label: `${year}`,
-    data: [1200, 1100, 980, 850, 800, 750, 700, 650, 600, 550].map(x => x + i * 30),
-    backgroundColor: ['#10b981', '#ef4444', '#3b82f6'][i % 3],
+    data: baseData.map(x => x + i * 30),
+    backgroundColor: colors[i % colors.length],
   }));
 
   return (
