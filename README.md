@@ -44,3 +44,11 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Running the python backend
+
+To isntall pip: https://www.geeksforgeeks.org/how-to-install-pip-on-windows/
+
+Now the main thing will be making sure to check your env vars and adding the new pip-path to it so that you can call it from powershell.
+
+After getting pip working, when you run the python server it'll tell you whatl ibraries you are missing, now all you have to do is "pip install ___"
