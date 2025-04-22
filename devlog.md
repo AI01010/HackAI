@@ -8,7 +8,7 @@ Added devlog, readme, and files
 front end, work continued w/ mock data
 add more metrics?
 
-## 04.20.2025 11:30 CodingSession::END
+## 04.20.2025 11:57 CodingSession::END
 
 UI: 
 
