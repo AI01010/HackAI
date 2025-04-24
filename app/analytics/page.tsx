@@ -1,9 +1,9 @@
 'use client';
 
 import Navbar from "@/components/Navbar";
-import NetGainsChart from "@/components/NetGainsChart";
+// import NetGainsChart from "@/components/NetGainsChart";
 import SeasonalTrendsChart from "@/components/SeasonalTrendsChart";
-import PeakHoursChart from "@/components/PeakHoursChart";
+// import PeakHoursChart from "@/components/PeakHoursChart";
 import TopMenuItemsChart from "@/components/TopMenuItemsChart";
 import FinancialSummary from "@/components/FinancialSummary";
 import Image from "next/image";

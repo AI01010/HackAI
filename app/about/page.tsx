@@ -79,7 +79,7 @@ export default function About() {
 
           {/* Accomplishments */}
           <section className="mb-6">
-            <h2 className="text-2xl font-semibold mb-2">Accomplishments That We're Proud Of</h2>
+            <h2 className="text-2xl font-semibold mb-2">Accomplishments That We&apos;re Proud Of</h2>
             <ul className="list-disc pl-6 text-lg">
               <li>Achieved forecasting accuracy that provides actionable insights for inventory and staffing.</li>
               <li>Reduced predicted food waste by optimizing menu offerings and stock levels.</li>
@@ -97,7 +97,7 @@ export default function About() {
 
           {/* What's Next */}
           <section className="mb-6">
-            <h2 className="text-2xl font-semibold mb-2">What's Next for Saucy Sales</h2>
+            <h2 className="text-2xl font-semibold mb-2">What&apos;s Next for Saucy Sales</h2>
             <ul className="list-disc pl-6 text-lg">
               <li>Expand the model to support multiple locations and more extensive datasets.</li>
               <li>Integrate real-time data updates and alerts for inventory and staffing needs.</li>

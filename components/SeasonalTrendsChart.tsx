@@ -1,6 +1,6 @@
 'use client';
 
-import { Line } from 'react-chartjs-2';
+// import { Line } from 'react-chartjs-2';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 

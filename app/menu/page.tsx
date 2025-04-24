@@ -2,7 +2,7 @@
 
 import Navbar from "@/components/Navbar";
 import MenuItem from '@/components/MenuItem';
-import Image from 'next/image';
+// import Image from 'next/image';
 import { Rye } from 'next/font/google';
 
 const rye = Rye({
