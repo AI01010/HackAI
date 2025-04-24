@@ -2,9 +2,9 @@
 
 // import { Bar } from 'react-chartjs-2';
 
-type Props = {
-  // Remove predictionRange if not used
-};
+// type Props = {
+//   // Remove predictionRange if not used
+// };
 
 // export default function PeakHoursChart({ predictionRange }: Props) {
 export default function PeakHoursChart() {
