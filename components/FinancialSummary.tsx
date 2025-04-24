@@ -48,7 +48,7 @@ export default function FinancialSummary({ predictionRange }: Props) {
         </div>
       </div>
       <p className="italic text-gray-600">
-        "Our updated forecasts—grounded in the final sales data—suggest a YOY growth of roughly 15% through {predictionRange}. Focused operational improvements and targeted marketing are key to sustaining this momentum."
+        &quot;Our updated forecasts—grounded in the final sales data—suggest a YOY growth of roughly 15% through {predictionRange}. Focused operational improvements and targeted marketing are key to sustaining this momentum.&quot;
       </p>
     </div>
   );
