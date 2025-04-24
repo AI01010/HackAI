@@ -40,3 +40,13 @@ financial summary + suggestions??
 - Another model where inputs are food, and outputs are the expected revenue. Then, gets their expectd revnue for the next years, like 2026. Gonna use a random forest for the foods (predicting their revenue in the next year), cause the sample size is small (only 3 years for each food), and less prone to overfitting. BUT THEN, user can define another food. Now, what we'll do is use some RAG tomfoolery to decide which current foods it's already closest to, and then gets its expected revenue that way.
 
 - One for general food groups, like pizzas as a whole and their revenue, same as the food one but more broad foods.
+
+
+## 04.24.2025 14:03 CodingSession::BEGIN
+
+pushing to vercel, 
+update unused imports
+update image types to improve load time
+menu load time was ~3830ms - improved to ~760ms
+
+## 04.24.2025 14:40 CodingSession::END
