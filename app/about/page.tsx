@@ -22,7 +22,7 @@ export default function About() {
           <section className="mb-6">
             <h2 className="text-2xl font-semibold mb-2">About the Project</h2>
             <p className={`${rye.className} text-lg`}>
-              Saucy Sales was born from the realization that many pizza shops struggle with overproduction and food waste while missing opportunities to optimize inventory and staffing. Inspired by industry reports and real challenges—like $1.3B in wasted food annually and inaccurate demand forecasts—this project was designed to provide actionable insights and help pizza operators turn data into better decision making.
+              Saucy Sales was born from the realization that many pizza shops struggle with overproduction and food waste while missing opportunities to optimize inventory and staffing. Inspired by industry reports and real challenges—like 1.3B tons in wasted food annually and inaccurate demand forecasts—this project was designed to provide actionable insights and help pizza operators turn data into better decision making.
             </p>
           </section>
 
@@ -31,13 +31,13 @@ export default function About() {
             <h2 className="text-2xl font-semibold mb-2">What it does</h2>
             <ul className="list-disc pl-6 text-lg">
               <li>
-                <strong>Forecasting:</strong> Uses historical sales data and AI-driven models to predict future sales trends.
+                <strong>Forecasting:</strong> Uses historical sales data and AI-driven models to predict future sales trends for the next 5 years.
               </li>
               <li>
                 <strong>Interactive Dashboards:</strong> Visualizes trends via responsive charts, helping users understand peak hours, seasonal trends, and menu performance.
               </li>
               <li>
-                <strong>Menu Simulation:</strong> Allows operators to test changes on menu items and see their potential impact on sales and inventory management.
+                <strong>Real-Time Analytics:</strong> Integrates RESTful API endpoints to deliver live sales data and financial metrics for enhanced operational decision-making.
               </li>
             </ul>
           </section>
@@ -47,10 +47,10 @@ export default function About() {
             <h2 className="text-2xl font-semibold mb-2">How We Built It</h2>
             <ul className="list-disc pl-6 text-lg">
               <li>
-                <strong>Frontend:</strong> Developed a modern, responsive dashboard using Next.js 14, React, and TypeScript.
+                <strong>Frontend:</strong> Developed a modern, responsive dashboard using Next.js 14, React, TypeScript, and Tailwind CSS.
               </li>
               <li>
-                <strong>Visualization:</strong> Leveraged Chart.js for dynamic and interactive data visualizations.
+                <strong>Visualization:</strong> Leveraged Python Matplotlib for dynamic and interactive data visualizations.
               </li>
               <li>
                 <strong>Backend & Data:</strong> Integrated data from CSV files and used Python (with libraries like pandas, and CatBoost) for robust forecasting.
